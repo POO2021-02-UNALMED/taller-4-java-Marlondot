@@ -2,13 +2,18 @@ package classroom;
 
 public class Persona {
 
-    final long cedula;
+    long cedula=0; //deleting the final in this line
     String nombre;
     static int totalPersonas;
     
+    //deleting cedula from here
     static {
         totalPersonas = 0;
-        cedula = 3;
+    }
+    
+    //constructor added
+    Persona(){
+    	
     }
 
     Persona(long cedula, String nombre) {
@@ -28,9 +33,11 @@ public class Persona {
         this.nombre = "";
         totalPersonas++;
     }
-
+    
+    //adding this.cedula=1 for the last line of the problem
     Persona(String nombre) {
         this.nombre = "";
+        this.cedula=1;
         totalPersonas++;
     }
     

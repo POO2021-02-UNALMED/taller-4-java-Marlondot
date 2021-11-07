@@ -5,7 +5,7 @@ public class Grupo {
     Persona[] estudiantes;
     Persona profesor;
     Asignatura asignatura;
-    final int codigo = 0;
+    int codigo=0; //deleting the final in variable codigo
     String horario;
 
     Grupo(Persona[] estudiantes, Persona profesor, Asignatura asignatura, int codigo, String horario) {
@@ -17,8 +17,8 @@ public class Grupo {
     }
 
     Grupo(int cantidadEstudiantes, Persona profesor, Asignatura asignatura, int codigo, String horario) {
-        Persona[] personas = new Persona[cantidadEstudiantes];
-        this(personas, profesor, asignatura, codigo, horario);
+        //Persona[] personas = new Persona[cantidadEstudiantes]; passed this line in the parameter
+        this(new Persona[cantidadEstudiantes], profesor, asignatura, codigo, horario);
     }
 
     Grupo(Persona[] estudiantes, Persona profesor, Asignatura asignatura) {

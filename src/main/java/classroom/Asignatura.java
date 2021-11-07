@@ -6,15 +6,17 @@ public class Asignatura {
     String n = nombre;
     int codigoInterno;
     int codigoExterno;
-
+    
+    //deleting this(0) because we are just interested in generating the course with the name
     Asignatura() {
         this("Sin nombre");
-        this(0);
+        //this(0);
     }
+    //Avoiding the next block because we dont use it
 
-    Asignatura(int codigoInterno) {
-        this("Sin nombre", codigoInterno, 0);
-    }
+    //Asignatura(int codigoInterno) {
+      //  this("Sin nombre", codigoInterno, 0);
+    //}
 
     Asignatura(int codigoExterno) {
         this("Sin nombre", 0, codigoExterno);
@@ -35,10 +37,10 @@ public class Asignatura {
         this.codigoExterno = codigoExterno;
         this.nombre = nombre;
     }
-
-    void cambiarDatos(int codigoInterno) {
-        this.codigoInterno = codigoInterno;
-    }
+    //avoiding this code because we already have a setCodigoInterno
+    //void cambiarDatos(int codigoInterno) {
+      //  this.codigoInterno = codigoInterno;
+    //}   
 
     void cambiarDatos(int codigoExterno) {
         this.codigoExterno = codigoExterno;
